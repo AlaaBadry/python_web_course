@@ -2,6 +2,7 @@ from flask import Flask
 
 app = Flask('test')
 
+
 @app.route("/register")
 def register():
     res = """
@@ -19,11 +20,13 @@ def register():
     """
     return res
 
+
 @app.route("/test")
 def test():
     with open("test.html") as f:
         content = str().join(f.readlines())
         return content
+
 
 if __name__ == "__main__":
     app.run()
