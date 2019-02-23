@@ -18,6 +18,10 @@
 * Variable Rules
 * HTTP Methods
 * The Request Object
+* HTTP Status Codes
+
+### Lecture 3
+
 * Redirects and Errors
 * Logging
 * Cookies
