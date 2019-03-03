@@ -22,7 +22,15 @@
 
 ### Lecture 3
 
-* Redirects and Errors
+* Web service
+* JSON vs XML
+* REASTful API
 * Logging
+* Errors
+
+### Lecture 4
+
+* SQLite Database
+* Redirects and Errors
 * Cookies
 * Sessions
