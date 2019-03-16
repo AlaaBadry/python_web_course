@@ -15,8 +15,8 @@ def create_connection(db_file):
 
 def create_table(conn, create_table_sql):
     try:
-        c = conn.cursor()
-        c.execute(create_table_sql)
+        cur = conn.cursor()
+        cur.execute(create_table_sql)
     except Error as e:
         print(e)
 
