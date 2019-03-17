@@ -38,6 +38,16 @@ def update_student(student_id):
     if not request.content_type == 'application/json':
         abort(400, "content type must be application/json")
     data = request.get_json()
+    # to handle partial update
+    for item in students:
+        if item["id"] == student_id:
+            for key in data:
+                item[key] = data[key]
+            return jsonify({"message": "success"})
+    else:
+        abort(404, "student not found")
+    """
+    # for full replacement
     for x in range(len(students)):
         if students[x]["id"] == student_id:
             del students[x]
@@ -45,6 +55,7 @@ def update_student(student_id):
             return jsonify({"message": "success"})
     else:
         abort(404, "student not found")
+    """
 
 
 @app.route("/students/<int:student_id>", methods=['DELETE'])
